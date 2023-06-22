@@ -1,0 +1,13 @@
+name: Test-github-action
+
+on:
+  push:
+    branches:
+        - bobe-kub
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: build docker image
+              run: docker build. --file Dockerfile --tag my-image-name:$(date +%s)
