@@ -2,8 +2,9 @@ name: Test-github-action
 
 on:
   push:
-    branches:
-        - bobe-kub
+    branches: ["bobe-kub"]
+  pull_request:
+    branches: ["bobe-kub"]
 jobs:
     build:
         runs-on: ubuntu-latest
